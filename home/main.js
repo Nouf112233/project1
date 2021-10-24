@@ -1,4 +1,4 @@
-const list=[
+const listItem=[
     {name:"Karak tea with French coffee with hazelnuts",
     type:"Hot drinks",
     ingredients:["Two cans of evaporated milk","3 tablespoons of tea","sugar as desired","3 Hill pods","3 cloves","2 tablespoons French coffee with hazelnuts"],
@@ -143,19 +143,18 @@ let long=6;
 //functions
 const addlike=(i)=>{
     list[i].favorite= !list[i].favorite;
-    
-   // rander(long);
+    rander(listItem);
 }
 
 const addvisit=(i)=>{
     list[i].visited=true;
-    rander(long);
-    //sessionStorage.setItem("SVisit",JSON.stringify(list[i]));
-   // window.location.href=``//أعطيه رابط صفحة الديسكربشن
+    rander(listItem);
+    sessionStorage.setItem("SVisit",JSON.stringify(list[i]));
+    window.location.href="file:///C:/Users/noufa/OneDrive/Desktop/project1/discription/index.html";//أعطيه رابط صفحة الديسكربشن
 
 }
 
-const rander=()=>{
+const rander=(list)=>{
     let favorit=[];
     $("#listBox").html("");
     for(let i=0 ; i<long ;i++)
@@ -173,7 +172,7 @@ const rander=()=>{
 
          if(list[i].favorite)
          {
-            $("#box-"+i).addClass("favor");
+            $("butBox"-+i).addClass("favor");
             favorit.push(list[i]);
 
          }
@@ -190,11 +189,11 @@ const rander=()=>{
          $("#box-"+i).dblclick(()=>{ addvisit(i)});
 
     }
-    // نرفع كل المفضله عاللوكل ستورج اسم "SListFavor"
-    // "SListAll"نرفع كل البيانات عاللوكل ستوريج اسم 
+    //localStorage."SListFavor"=JSON.stringify(listAll); //   نرفع كل المفضله عاللوكل ستورج اسم "SListFavor"
+    //localStorage."SListAll"=JSON.stringify(favorit);// "SListAll"نرفع كل البيانات عاللوكل ستوريج اسم 
 
 };
-rander()
+rander(listItem);
 
 $("#butAdd").click(()=>{
     if(long+6>=list.length)
@@ -206,7 +205,18 @@ $("#butAdd").click(()=>{
     }else{
         long+=6;
     }
-    rander(long);
+    rander(listItem);
+});
+
+document.getElementById("searchBar").addEventListener("keyup",(e)=>{
+     const searchCharacter=e.target.value.toLowerCase();
+     const filterItem=listItem.filter(item=>{
+         return item.name.toLocaleLowerCase().includes(searchCharacter)||item.type.toLocaleLowerCase().includes(searchCharacter);
+     });
+     rander(filterItem);
+})
+document.getElementById("searchBar").addEventListener("change",(e)=>{
+    e.target.value="";
 });
 
 
