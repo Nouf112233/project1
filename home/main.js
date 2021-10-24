@@ -143,7 +143,8 @@ let long=6;
 //functions
 const addlike=(i)=>{
     list[i].favorite= !list[i].favorite;
-    rander(long);
+    
+   // rander(long);
 }
 
 const addvisit=(i)=>{
@@ -172,21 +173,21 @@ const rander=()=>{
 
          if(list[i].favorite)
          {
-            $("box-"+i).addClass("favor");
+            $("#box-"+i).addClass("favor");
             favorit.push(list[i]);
 
          }
          if(list[i].visited)
          {
-            $("box-"+i).addClass("visit")
+            $("#box-"+i).addClass("visit")
             
          }
 
          //event for like button
-         $("butBox-"+i).click(()=>{ addlike(i)});
+         $("#butBox-"+i).click(()=>{ addlike(i)});
          
          //event for vist click
-         $("box-"+i).dblclick(()=>{ addvisit(i)});
+         $("#box-"+i).dblclick(()=>{ addvisit(i)});
 
     }
     // نرفع كل المفضله عاللوكل ستورج اسم "SListFavor"
