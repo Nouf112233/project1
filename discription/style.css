@@ -71,3 +71,30 @@ header{
       height: 100px;
       margin: 0 auto;
     }
+
+    #maindis{
+    width: 85%;
+    margin: 0 auto;
+    }
+
+    .h{
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: #72A299;
+      font-weight: bold;
+      text-align: center;
+      font-size: 5rem;
+      margin-bottom: 4rem;
+    }
+    .p{
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: rgb(75, 73, 73);
+      font-weight: bold;
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 6rem;
+
+    }
+
+    footer {
+        text-align: center;
+      }
