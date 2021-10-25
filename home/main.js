@@ -147,9 +147,9 @@ const addlike=(i)=>{
 }
 
 const addvisit=(i)=>{
-    list[i].visited=true;
+    listItem[i].visited=true;
     rander(listItem);
-    sessionStorage.setItem("SVisit",JSON.stringify(list[i]));
+    sessionStorage.setItem("SVisit",JSON.stringify(listItem[i]));
     window.location.href="file:///C:/Users/noufa/OneDrive/Desktop/project1/discription/index.html";//أعطيه رابط صفحة الديسكربشن
 
 }
@@ -196,9 +196,9 @@ const rander=(list)=>{
 rander(listItem);
 
 $("#butAdd").click(()=>{
-    if(long+6>=list.length)
+    if(long+6>=listItem.length)
     {
-        long=list.length;
+        long=listItem.length;
         $("#butAdd").hide();
         
 

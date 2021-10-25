@@ -17,7 +17,7 @@ const addvisit=(i)=>{
 const rander=()=>{
     //let favorit=[];
     $("#divmain").html("");
-    for(let i=0 ; i<long ;i++)
+    for(let i=0 ; i<listFavorit.length ;i++)
     {
        
      
