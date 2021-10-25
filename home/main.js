@@ -27,7 +27,7 @@ const listItem=[
     type:"Soup",
     ingredients:[`A little oil.`,`Large chopped onion.`,`A number of garlic cloves.`,`A cup of only a quarter of lentils.`,`Two zucchini cut into slices.`,`One medium potato, cut into cubes`,`Crushed coriander.`,`4 cups of chicken broth.`,`Salt, pepper, cumin, turmeric and curry spice in quantities as desired.`],
     steps:[`In a deep pot on the fire, fry the sliced ​​onions with garlic in a little oil.`,`Add the amount of lentils, zucchini, potatoes and crushed coriander, then stir the ingredients well in the bowl until their color changes.`,`Add the chicken broth, then cover the pot and leave it to boil, then reduce the heat until the ingredients are cooked.`,`Mix all the ingredients with an India blender or wait until it cools down a bit and put all the ingredients in a blender until homogeneous.`,`Return the ingredients to the fire again to get the desired consistency with the addition of salt, pepper, spices and curry.`,`Put it in a bowl or bowl and then serve it on the table.`],
-    imges:["../img/شوربة-دجاج-بالخضار1.jpg","../img/شوربة-دجاج بالخضار2.jpg","../img/شوربة-دجاج-بالخضار3.jpg"],
+    imges:["../img/شوربة-دجاج-بالخضار1.jpg","../img/شوربة-دجاج-بالخضار2.jpg","../img/شوربة-دجاج-بالخضار3.jpg"],
     favorite:false,
     visited:false
 },
@@ -43,7 +43,7 @@ const listItem=[
     type:"Salad",
     ingredients:[`3 potatoes.`,`A tablespoon of salt.`,`2 tablespoons chopped parsley.`,`Half a cup of green onions.`,`Seasonings "two tablespoons of lemon, 5 tablespoons of olive oil, one tablespoon of mustard, two tablespoons of mayonnaise, one tablespoon of sugar, one tablespoon but a quarter of salt, half a tablespoon of black pepper, a clove of minced garlic".`],
     steps:[`Put the potatoes in an appropriate amount of water and raise them on the fire to boil with a spoon of salt.`,`Meanwhile, mix all the dressing ingredients.`,`After the potatoes are boiled, peel them and cut them into small cubes.`,`Put half of the marinade on the potatoes, and the second half add it to the chopped parsley and green onions after chopping it.`,`Leave the potatoes in the marinade for at least 30 minutes.`,`after half an hour has passed; Add the mixture of parsley, onion and seasoning to the potatoes and serve it on your table.`],
-    imges:["../img/سلطة-بطاطس1.jpg","../img/سلطة بطاطس2.jpg","../img/سلطة-بطاطس3.jpg"],
+    imges:["../img/سلطة-بطاطس1.jpg","../img/سلطة-بطاطس2.jpg","../img/سلطة-بطاطس3.jpg"],
     favorite:false,
     visited:false
 },
@@ -136,7 +136,7 @@ const listItem=[
     visited:false
 },
 ];
-const listAll=JSON.parse(localStorage.getItem("SListAll"));
+//const listItem=JSON.parse(localStorage.getItem("SListAll"));
 let long=6;
 
 
@@ -162,7 +162,7 @@ const rander=(list)=>{
        
      
          $("#listBox").append(`<div id="box-${i}" class="box"> 
-         <img src=${list[i].imges[2]} alt="dish picture" class="imgBox">
+         <img src=${list[i].imges[1]} alt="dish picture" class="imgBox">
          <div class="infoBox">
          <h1 class="hBox">${list[i].name}<h1>
          <p class="pBox">${list[i].type}<p>
@@ -172,10 +172,13 @@ const rander=(list)=>{
 
          if(list[i].favorite)
          {
-            $("butBox"-+i).addClass("favor");
+            $("#butBox-"+i).addClass("favor");
             favorit.push(list[i]);
-
+         }else{
+            $("#butBox-"+i).removeClass("favor");
          }
+
+
          if(list[i].visited)
          {
             $("#box-"+i).addClass("visit")
@@ -189,7 +192,7 @@ const rander=(list)=>{
          $("#box-"+i).dblclick(()=>{ addvisit(i)});
 
     }
-    //localStorage."SListFavor"=JSON.stringify(listAll); //   نرفع كل المفضله عاللوكل ستورج اسم "SListFavor"
+    //localStorage."SListFavor"=JSON.stringify(listItem); //   نرفع كل المفضله عاللوكل ستورج اسم "SListFavor"
     //localStorage."SListAll"=JSON.stringify(favorit);// "SListAll"نرفع كل البيانات عاللوكل ستوريج اسم 
 
 };
@@ -213,7 +216,8 @@ document.getElementById("searchBar").addEventListener("keyup",(e)=>{
      const filterItem=listItem.filter(item=>{
          return item.name.toLocaleLowerCase().includes(searchCharacter)||item.type.toLocaleLowerCase().includes(searchCharacter);
      });
-     rander(filterItem);
+     
+    rander(filterItem);
 })
 document.getElementById("searchBar").addEventListener("change",(e)=>{
     e.target.value="";

@@ -4,39 +4,42 @@
 //functions
 const addlike=(i)=>{
     list[i].favorite= !list[i].favorite;
-    rander(long);
+    rander(listFavorit);
 }
 
 const addvisit=(i)=>{
     list[i].visited=true;
-    rander(long);
+    rander(listFavorit);
     sessionStorage.setItem("SVisit",JSON.stringify(list[i]));
     window.location.href="file:///C:/Users/noufa/OneDrive/Desktop/project1/discription/index.html";
 }
 
-const rander=()=>{
+const rander=(list)=>{
     //let favorit=[];
     $("#divmain").html("");
-    for(let i=0 ; i<listFavorit.length ;i++)
+    for(let i=0 ; i<list.length ;i++)
     {
        
      
          $("#divmain").append(`<div id="box-${i}" class="box"> 
-         <img src=${listFavorit[i].imges[2]} alt="dish picture" class="imgBox">
+         <img src=${list[i].imges[2]} alt="dish picture" class="imgBox">
          <div class="infoBox">
-         <h1 class="hBox">${listFavorit[i].name}<h1>
-         <p class="pBox">${listFavorit[i].type}<p>
+         <h1 class="hBox">${list[i].name}<h1>
+         <p class="pBox">${list[i].type}<p>
          <button id="butBox-${i}" class="butBox">like</button>
          </div>
          </div>`);
 
-         if(listFavorit[i].favorite)
+         if(list[i].favorite)
          {
-            $("#box-"+i).addClass("favor");
+            $("#butBox-"+i).addClass("favor");
             favorit.push(list[i]);
-
+         }else{
+            $("#butBox-"+i).removeClass("favor");
          }
-         if(listFavorit[i].visited)
+
+
+         if(list[i].visited)
          {
             $("#box-"+i).addClass("visit")
             
@@ -54,7 +57,20 @@ const rander=()=>{
 
 
 };
-rander()
+rander(listFavorit)
+
+document.getElementById("searchBar").addEventListener("keyup",(e)=>{
+    const searchCharacter=e.target.value.toLowerCase();
+    const filterItem=listItem.filter(item=>{
+        return item.name.toLocaleLowerCase().includes(searchCharacter)||item.type.toLocaleLowerCase().includes(searchCharacter);
+    });
+    
+    rander(filterItem);
+    
+});
+document.getElementById("searchBar").addEventListener("change",(e)=>{
+   e.target.value="";
+});
 
 
 
