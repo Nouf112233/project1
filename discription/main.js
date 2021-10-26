@@ -9,32 +9,31 @@ let a=1;
 
 if(visitItem)
 {
-$("#imgs").html(`<button id="precedent" class="moreImg"><</button>
+
+$("#maindis").html(`<div id="imgs"><button id="precedent" class="moreImg"><</button>
 <img src="${visitItem.imges[1]}" alt="dish picture" id="img" class="img"/>
-<button id="appendage"  class="moreImg">></button>`);
-
-
-$("#maindis").html(`<h1 id="name">${visitItem.name}</h1> 
+<button id="appendage"  class="moreImg">></button></div>
+<h1 id="name" class="hdis">${visitItem.name}</h1> 
 <p id="type">${visitItem.type}</p>
 <div id="divIngredients"> 
-    <h2>Ingredients :</h2> 
-    <ul id="listIng"> </ul>
+    <h2 class="hdis">Ingredients :</h2> 
+    <ul id="listIng" class="list"> </ul>
 </div>
 <div id="divsteps"> 
-    <h2>Steps :</h2> 
-    <ol id="listStep"> </ol>
+    <h2 class="hdis">Steps :</h2> 
+    <ol id="listStep" class="list"> </ol>
 </div>
 `);
 
 
 for(let i=0; i<visitItem.ingredients.length;i++)
 {
-    $("#listIng").append(`<li> ${visitItem.ingredients[i]}</li>`);
+    $("#listIng").append(`<li class="li"> ${visitItem.ingredients[i]}</li>`);
 }
 
 for(let i=0; i<visitItem.steps.length;i++)
 {
-    $("#listStep").append(`<li> ${visitItem.steps[i]}</li>`);
+    $("#listStep").append(`<li class="li"> ${visitItem.steps[i]}</li>`);
 }
 
 
