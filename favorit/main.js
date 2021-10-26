@@ -12,12 +12,12 @@ listFavorit=[ {
     ],
     steps: [
       `In the teapot we put the tea and then the sugar.`,
-      `We pour hot water and raise the fire until the tea with sugar boils completely\.`,
-      `Add the evaporated milk, then the cardamom and cloves, then the French coffee with hazelnuts\.`,
-      `Leave it on a low heat and boil completely and enjoy the most delicious karak\.`,
+      `We pour hot water and raise the fire until the tea with sugar boils completely.`,
+      `Add the evaporated milk, then the cardamom and cloves, then the French coffee with hazelnuts.`,
+      `Leave it on a low heat and boil completely and enjoy the most delicious karak.`,
     ],
     imges: ["../img/franchCofee.jpg", "../img/karak.jpg", "../img/karak2.jpg"],
-    favorite: false,
+    favorite: true,
     visited: false,
   },
   {
@@ -42,7 +42,7 @@ listFavorit=[ {
       `Few crushed black lemon`,
       `Pinch of sugar "the secret of the flavour"`,
       `pinch saffron powder`,
-      ``,
+      
     ],
     steps: [
       `Saute the onions until they wilt, then add the spices and garlic, and saute them a little`,
@@ -90,7 +90,7 @@ listFavorit=[ {
       `Cut and serve with fries.`,
     ],
     imges: ["../img/كساديا.jpg", "../img/كساديا2.jpg", "../img/كساديا3.jpg"],
-    favorite: false,
+    favorite: true,
     visited: false,
   }];
   
@@ -111,9 +111,10 @@ const addvisit=(i)=>{
 const rander=(list)=>{
     //let favorit=[];
     $("#listBox").html("");
-    for(let i=0 ; i<listFavorit.length ;i++)
+    for(let i=0 ; i<list.length ;i++)
     {
-       
+       if(list[i].favorite)
+       {
      
          $("#listBox").append(`<div id="box-${i}" class="box"> 
          <img src=${list[i].imges[2]} alt="dish picture" class="imgBox">
@@ -127,9 +128,10 @@ const rander=(list)=>{
          if(list[i].favorite)
          {
             $("#butBox-"+i).addClass("favor");
-            favorit.push(list[i]);
+            // favorit.push(list[i]);
+            
          }
-
+         
 
          if(list[i].visited)
          {
@@ -143,7 +145,9 @@ const rander=(list)=>{
          //event for vist click
          $("#box-"+i).dblclick(()=>{ addvisit(i)});
 
+        }   
     }
+
      //localStorage."SListFavor"=JSON.stringify(listAll); //   نرفع كل المفضله عاللوكل ستورج اسم "SListFavor"
     //localStorage."SListAll"=JSON.stringify(favorit);// "SListAll"نرفع كل البيانات عاللوكل ستوريج اسم 
 
