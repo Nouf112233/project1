@@ -26,32 +26,46 @@ const rander=(list)=>{
        {
      
          $("#listBox").append(`<div id="box-${i}" class="box"> 
-         <img src=${list[i].imges[2]} alt="dish picture" class="imgBox">
+         <img src=${list[i].imges[2]} alt="dish picture" class="imgBox" id="img-${i}">
          <div class="infoBox" >
-         <h1 class="hBox">${list[i].name}<h1>
-         <p class="pBox">${list[i].type}<p>
+         <h1 class="hBox" id="hBox-${i}">${list[i].name}<h1>
+         <p class="pBox" id="pBox-${i}">${list[i].type}<p>
+         <div id="divLV">
          <button id="butBox-${i}" class="butBox">. like .</button>
+         <p id="visited-${i}" class="visited"> .visited. </p>
+         </div>
          </div>
          </div>`);
+
+         $("#visited-"+i).hide();
 
          if(list[i].favorite)
          {
             $("#butBox-"+i).addClass("favor");
-         
-            
+            $("#butBox-" + i).html("un like")
+           
          }
          
 
          if(list[i].visited)
          {
-            // $("#box-"+i).css("opacity","0.4");  
+            $("#visited-"+i).show(); 
          }
 
          //event for like button
          $("#butBox-"+i).click(()=>{ addlike(i)});
          
          //event for vist click
-         $("#box-"+i).dblclick(()=>{ addvisit(i)});
+         
+         $("#img-"+i).click(() => {
+            addvisit(i);
+          });
+          $("#hBox-"+i).click(() => {
+              addvisit(i);
+          });
+          $("#pBox-"+i).click(() => {
+              addvisit(i);
+          });
 
         }   
     }

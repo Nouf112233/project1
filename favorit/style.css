@@ -68,7 +68,7 @@ header{
     #imghomeImg {
         display: block;
       width: 98%;
-      height: 200px;
+      height: 140px;
       margin: 0 auto;
     }
     
@@ -114,7 +114,7 @@ header{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+      
       }
       
       .imgBox {
@@ -127,8 +127,9 @@ header{
       .hBox
        {
         font-weight: 80%;
-        font-size: 1.5rem;
-        width: 90%;
+        font-size: 2rem;
+        width: 100%;
+        font-weight: 80%;
         text-align: center;
         color: whitesmoke;
         
@@ -137,32 +138,50 @@ header{
           text-align: center;
           color: whitesmoke;
           font-weight:bold;
-          font-size: 2rem;
+          font-size: 3rem;
           width:  100%;
           font-style: italic;
           
       
       }
+      #divLV{
+        display: flex;
+      flex-direction: row;
+      justify-content:space-evenly;
+     
+    }
       .butBox{
+        display: inline;
           color: #4F70A5;
           border-radius: 30px;
           font-size: 20px;
           
           
       }
+      .visited{
+        background-color: whitesmoke;
+        color:#4F70A5; 
+        display: inline;
+        border-radius: 30px;
+        font-size: 23px; 
+    }
       
     
+  
       footer {
         text-align: center;
+        font-size: 20px;
+        margin-top: 70px;
+        font-style:italic;
+        font-family:cursive;
+        color: cornflowerblue;
       }
+      
       
        .favor{
           background-color: red;
           color: whitesmoke;
       }
       
-       .visit{
-      
-         background-color: black;
-      }  
+       
       
