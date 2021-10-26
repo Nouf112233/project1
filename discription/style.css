@@ -61,8 +61,14 @@ header{
       
     }
     .itemnav:hover{
-    
-    }
+      color: #6a64b9 ;
+       
+  }
+   .itemnav:active{
+      color: #6a64b9;
+      font-size: 230%;
+  
+   }
     
     
     #imghomeImg {

@@ -61,8 +61,14 @@ header{
       
     }
     .itemnav:hover{
-    
-    }
+      color: #6a64b9 ;
+       
+  }
+   .itemnav:active{
+      color: #6a64b9;
+      font-size: 230%;
+  
+   }
     
     
     #imghomeImg {
@@ -78,7 +84,13 @@ header{
       margin-top: 0px;
       margin-left: 2%;
       font-size: 100%;
+      transition: 1s;
     }
+
+    #searchBar:hover {
+      transform: scale(1.1);
+    }
+
     #hmain{
       font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
       color: #4F70A5;
@@ -107,8 +119,13 @@ header{
         align-items: center;
         border-radius: 20px;
         box-shadow: 6px 6px 20px 6px rgba(0,0,0,0.66);
+        transition: 1s;
       }
-      
+      .box:hover {
+        background-color: #45746b;
+        transform: scale(1.1);
+      }
+     
       .infoBox {
         width: 50%;
         display: flex;

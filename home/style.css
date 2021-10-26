@@ -52,22 +52,25 @@ color:whitesmoke ;
   margin-left: 36%;
 }
 
-.itemnav:link{
+.itemnav{
   padding: 4%;
   font-size: 200%;
   text-decoration: none;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: #4F70A5;
   font-weight: bold;
+  transition: 1s;
   
 }
 .itemnav:hover{
-
+    color: #6a64b9 ;
+    text-decoration: none;
+    transform: scale(1.1);
 }
 
 
 #imghomeImg {
-    display: block;
+  display: block;
   width: 98%;
   height: 140px;
   margin: 0 auto;
@@ -79,8 +82,13 @@ color:whitesmoke ;
   margin-top: 0px;
   margin-left: 2%;
   font-size: 100%;
+  transition: 1s;
 }
 
+#searchBar:hover {
+    transform: scale(1.1);
+  }
+  
 #listBox {
   width: 90%;
   margin: 3rem auto;
@@ -100,6 +108,12 @@ color:whitesmoke ;
   align-items: center;
   border-radius: 20px;
   box-shadow: 6px 6px 20px 6px rgba(0,0,0,0.66);
+  transition: 1s;
+}
+.box:hover {
+    background-color: #45746b;
+    transform: scale(1.1);
+  
 }
 
 .infoBox {
