@@ -48,7 +48,7 @@ header{
     .topnav {
       width: 55%;
       height: 30%;
-      margin-left: 30%;
+      margin-left: 35%;
     }
     
     .itemnav{
@@ -170,6 +170,11 @@ header{
       font-family:cursive;
       color: cornflowerblue;
     }
+    @media screen and (max-width: 900px) {
+      .topnav{
+        margin-left: 33%;
+      }
+    }
     @media screen and (max-width: 768px) {
       .title1{
           font-size: 3rem;
@@ -221,6 +226,10 @@ header{
    
         }
    }
+   @media screen and (max-width: 590px){
+    .topnav{
+      margin-left: 28%;
+   }
   
     @media screen and (max-width: 533px)
     {
@@ -238,7 +247,7 @@ header{
       }
       .topnav {
           width: 70%;
-          margin-left: 30%;
+          margin-left: 33%;
         }
       
       .itemnav{

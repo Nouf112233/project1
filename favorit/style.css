@@ -48,7 +48,7 @@ header{
     .topnav {
       width: 55%;
       height: 30%;
-      margin-left: 30%;
+      margin-left: 35%;
     }
     
     .itemnav{
@@ -198,6 +198,10 @@ header{
           background-color: red;
           color: whitesmoke;
       }
+      @media screen and (max-width: 900px) {
+        .topnav{
+          margin-left: 33%;
+        }
       
       @media screen and (max-width: 768px) {
         .title1{
@@ -250,6 +254,10 @@ header{
      
           }
      }
+     @media screen and (max-width: 590px){
+      .topnav{
+        margin-left: 28%;
+     }
     
       @media screen and (max-width: 533px)
       {
@@ -267,7 +275,7 @@ header{
         }
         .topnav {
             width: 70%;
-            margin-left: 30%;
+            margin-left: 33%;
           }
         
         .itemnav{
