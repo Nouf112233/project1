@@ -1,7 +1,6 @@
 
 
-const listFavorit=JSON.parse(localStorage.getItem("SListAll")) 
-;
+const listFavorit=JSON.parse(localStorage.getItem("SListAll")) ;
   
 
 //functions
@@ -14,9 +13,10 @@ const addvisit=(i)=>{
     listFavorit[i].visited=true;
     rander(listFavorit);
     sessionStorage.setItem("SVisit",JSON.stringify(listFavorit[i]));
-    window.location.href="../discription/index.html";
+    window.location.href =
+    "../discription/index.html";
 }
-
+ 
 const rander=(list)=>{
    
     $("#listBox").html("");
@@ -74,6 +74,8 @@ const rander=(list)=>{
 
 
 };
+// end the rander function
+
 rander(listFavorit)
 
 document.getElementById("searchBar").addEventListener("keyup",(e)=>{
