@@ -123,6 +123,7 @@ header{
     .moreImg{
         width: 5%;
         background-color: grey;
+        color: whitesmoke;
         box-shadow: 6px 6px 20px 6px rgba(0,0,0,0.66);
 
     }

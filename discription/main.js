@@ -10,9 +10,9 @@ let a=1;
 if(visitItem)
 {
 
-$("#maindis").html(`<div id="imgs"><button id="precedent" class="moreImg"><</button>
+$("#maindis").html(`<div id="imgs"><button id="precedent" class="moreImg btn btn-outline-secondary"><</button>
 <img src="${visitItem.imges[1]}" alt="dish picture" id="img" class="img"/>
-<button id="appendage"  class="moreImg">></button></div>
+<button id="appendage"  class="moreImg btn btn-outline-secondary">></button></div>
 <h1 id="name" class="hdis">${visitItem.name}</h1> 
 <p id="type">${visitItem.type}</p>
 <div id="divIngredients"> 

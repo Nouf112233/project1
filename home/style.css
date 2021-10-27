@@ -178,7 +178,7 @@ color:whitesmoke ;
   margin: 0 auto;
   font-size: large;
   font-weight: 10%;
-  font-size: 3rem;
+  font-size: 2rem;
   border-radius: 10px;
   color: #72A299;
 }
@@ -239,7 +239,7 @@ footer {
       }
      #butAdd {
     
-        font-size: 2rem;
+        font-size: 1.5rem;
       }
      footer {
    
@@ -278,7 +278,7 @@ footer {
       }
       #butAdd {
     
-        font-size: 1.5rem;
+        font-size: 1rem;
       }
      
   }
