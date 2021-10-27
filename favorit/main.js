@@ -14,7 +14,7 @@ const addvisit=(i)=>{
     listFavorit[i].visited=true;
     rander(listFavorit);
     sessionStorage.setItem("SVisit",JSON.stringify(listFavorit[i]));
-    window.location.href="file:///C:/Users/noufa/OneDrive/Desktop/project1/discription/index.html";
+    window.location.href="../discription/index.html";
 }
 
 const rander=(list)=>{
