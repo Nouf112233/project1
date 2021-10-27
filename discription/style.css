@@ -46,9 +46,9 @@ header{
       padding-top: 2%;
     }
     .topnav {
-      width: 50%;
+      width: 55%;
       height: 30%;
-      margin-left: 36%;
+      margin-left: 30%;
     }
     
     .itemnav{
@@ -108,20 +108,20 @@ header{
     }
     
     #imgs{
-       width: 60%;
+       width: 65%;
        height: 200px;
        margin: 25px auto;
         
     }
     .img{
-        width: 88%;
+        width: 85%;
         height: 100%;
         border-radius: 10px;
         border:gray 2px;
         box-shadow: 6px 6px 20px 6px rgba(0,0,0,0.66);
     }
     .moreImg{
-        width: 5%;
+        width: 4%;
         background-color: grey;
         color: whitesmoke;
         box-shadow: 6px 6px 20px 6px rgba(0,0,0,0.66);
@@ -202,6 +202,9 @@ header{
           width: 80%;
        
         }
+        .moreImg{
+          width: 4%;
+        }
         .hdis{
           font-size: 4rem;
         }
@@ -249,8 +252,18 @@ header{
         .p{
           font-size: 1rem;
         }
+        #imgs{
+          width: 80%;
+        }
+        .img{
+          width: 70%;
+       
+        }
+        .moreImg{
+          width: 3%;
+        }
         .hdis{
-          font-size: 3rem;
+          font-size: 2rem;
         }
         #type{
           font-size: 1.8rem;
