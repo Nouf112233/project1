@@ -44,6 +44,7 @@ header{
       margin-left: 50%;
       margin-right: 2.5%;
       padding-top: 2%;
+      margin-bottom: 20px;
     }
     .topnav {
       width: 55%;
@@ -72,7 +73,7 @@ header{
     #imghomeImg {
         display: block;
       width: 98%;
-      height: 140px;
+      height: 200px;
       margin: 0 auto;
     }
 
@@ -230,6 +231,7 @@ header{
     .topnav{
       margin-left: 28%;
    }
+  }
   
     @media screen and (max-width: 533px)
     {
