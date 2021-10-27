@@ -31,7 +31,7 @@ header{
     }
     
     #title{
-        width: 19%;
+        width: 30%;
        margin-left: 44%;
       
     }
@@ -51,25 +51,23 @@ header{
       margin-left: 36%;
     }
     
-    .itemnav:link{
+    .itemnav{
       padding: 4%;
       font-size: 200%;
       text-decoration: none;
       font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
       color: #4F70A5;
       font-weight: bold;
+      transition: 1s;
       
     }
     .itemnav:hover{
       color: #6a64b9 ;
+    text-decoration: none;
+    transform: scale(1.1);
        
   }
-   .itemnav:active{
-      color: #6a64b9;
-      font-size: 230%;
   
-   }
-    
     
     #imghomeImg {
         display: block;
@@ -110,7 +108,7 @@ header{
     }
     
     #imgs{
-       width: 55%;
+       width: 60%;
        height: 200px;
        margin: 25px auto;
         
@@ -119,10 +117,13 @@ header{
         width: 88%;
         height: 100%;
         border-radius: 10px;
+        border:gray 2px;
+        box-shadow: 6px 6px 20px 6px rgba(0,0,0,0.66);
     }
     .moreImg{
         width: 5%;
         background-color: grey;
+        box-shadow: 6px 6px 20px 6px rgba(0,0,0,0.66);
 
     }
 
@@ -148,6 +149,7 @@ header{
     .list{
         background-color:#72A299;
         width: 80%;
+        box-shadow: 6px 6px 20px 6px rgba(0,0,0,0.66);
     }
     .li{
         font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -166,4 +168,96 @@ header{
       font-style:italic;
       font-family:cursive;
       color: cornflowerblue;
+    }
+    @media screen and (max-width: 768px) {
+      .title1{
+          font-size: 3rem;
+      
+      }
+      .title2{
+          font-size: 2rem;
+      }
+      .topnav {
+          width: 60%;
+          height: 30%;
+          margin-left: 30%;
+        }
+        
+        .itemnav{
+          padding: 4%;
+          font-size: 2.3rem;
+          
+        }
+        .h{
+          font-size: 4rem;
+        }
+        .p{
+          font-size: 1.5rem;
+        }
+        #imgs{
+          width: 70%;
+        }
+        .img{
+          width: 80%;
+       
+        }
+        .hdis{
+          font-size: 4rem;
+        }
+        #type{
+         font-size: 2.3rem;
+        }
+        .li{
+          font-size: 1.5rem;
+        }
+       
+       footer {
+     
+          font-size: 10px;
+   
+        }
+   }
+  
+    @media screen and (max-width: 533px)
+    {
+      #title{
+          width: 40%;
+         margin-left: 40%;
+        
+      }
+      .title1{
+          font-size: 2rem;
+      
+      }
+      .title2{
+          font-size: 1rem;
+      }
+      .topnav {
+          width: 70%;
+          margin-left: 30%;
+        }
+      
+      .itemnav{
+         
+          font-size: 1.2rem;
+          
+        }
+        .h{
+          font-size: 3rem;
+        }
+        .p{
+          font-size: 1rem;
+        }
+        .hdis{
+          font-size: 3rem;
+        }
+        #type{
+          font-size: 1.8rem;
+         }
+         .li{
+           font-size: 1rem;
+         }
+       
+       
+       
     }

@@ -32,7 +32,7 @@ color:whitesmoke ;
 }
 
 #title{
-    width: 19%;
+    width: 30%;
    margin-left: 44%;
   
 }
@@ -47,7 +47,7 @@ color:whitesmoke ;
   padding-top: 2%;
 }
 .topnav {
-  width: 50%;
+  width: 55%;
   height: 30%;
   margin-left: 36%;
 }
@@ -196,4 +196,89 @@ footer {
     background-color: red;
     color: whitesmoke;
 }
-  
+@media screen and (max-width: 768px) {
+    .title1{
+        font-size: 3rem;
+    
+    }
+    .title2{
+        font-size: 2rem;
+    }
+    .topnav {
+        width: 60%;
+        height: 30%;
+        margin-left: 30%;
+      }
+      
+      .itemnav{
+        padding: 4%;
+        font-size: 2.3rem;
+        
+      }
+    
+    #listBox {
+      
+        grid-template-columns: 29% 29% 29% ;
+      }
+    .hBox
+      {
+        font-size: 1.5rem;
+      }
+     .pBox{
+        font-size: 2.2rem;
+      }
+     .butBox{
+   
+        border-radius: 20px;
+         font-size: 15px; 
+ 
+      }
+    .visited{
+        border-radius: 20px;
+        font-size: 15px; 
+      }
+     #butAdd {
+    
+        font-size: 2rem;
+      }
+     footer {
+   
+        font-size: 10px;
+ 
+      }
+ }
+
+  @media screen and (max-width: 533px)
+  {
+    #title{
+        width: 40%;
+       margin-left: 40%;
+      
+    }
+    .title1{
+        font-size: 2rem;
+    
+    }
+    .title2{
+        font-size: 1rem;
+    }
+    .topnav {
+        width: 70%;
+        margin-left: 30%;
+      }
+    
+    .itemnav{
+       
+        font-size: 1.2rem;
+        
+      }
+      #listBox {
+      
+        grid-template-columns: 43% 43% ;
+      }
+      #butAdd {
+    
+        font-size: 1.5rem;
+      }
+     
+  }
