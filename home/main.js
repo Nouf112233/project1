@@ -486,7 +486,8 @@ const addvisit = (i) => {
   listItem[i].visited = true;
   rander(listItem);
   sessionStorage.setItem("SVisit", JSON.stringify(listItem[i]));
-  window.location.href = "../discription/index.html"; //أعطيه رابط صفحة الديسكربشن
+  window.location.href =
+    "../discription/index.html"; //أعطيه رابط صفحة الديسكربشن
 };
 
 
